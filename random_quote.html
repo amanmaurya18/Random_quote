@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random quote generator</title>
+</head>
+<style>
+    body {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;   
+    margin: 0;
+}
+    .box{
+        align-items: center;
+        justify-content: center;
+        background-color: pink;
+        height:70vh;
+        width: 80vh;
+        margin: auto;
+        border-radius: 9px;
+        box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+    }
+    .quote{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        transition: ease-in-out;
+        margin: auto;
+        border-radius: 6px;
+    }
+    .quote:hover{
+        transform: scale(1.12);
+        background-color: black;
+        color: #fff;
+    }
+    h2{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-top: 40px;
+        color: #fff;
+        background-color: rgb(0, 0, 0);
+    }
+    .box:hover{
+        transform: scale(1.02);
+    }
+</style>
+<body>
+    <h2>Random quote generator</h2>
+    <div class="box">
+        <h1 class="n">Your quote is here...</h1>
+        <button class="quote">Click to generate</button>      
+    </div>
+<script>
+ const bg=document.querySelector('.quote')
+ const h=document.querySelector('.n')  
+ const quotes = [
+  "The best way to predict the future is to invent it. – Alan Kay",
+  "Do what you can, with what you have, where you are. – Theodore Roosevelt",
+  "Success is not final, failure is not fatal: It is the courage to continue that counts. – Winston Churchill",
+  "In the middle of every difficulty lies opportunity. – Albert Einstein",
+  "Don’t count the days, make the days count. – Muhammad Ali",
+  "Happiness depends upon ourselves. – Aristotle",
+  "The secret of getting ahead is getting started. – Mark Twain",
+  "Act as if what you do makes a difference. It does. – William James",
+  "Dream big and dare to fail. – Norman Vaughan",
+  "Turn your wounds into wisdom. – Oprah Winfrey",
+  "What you get by achieving your goals is not as important as what you become by achieving your goals. – Zig Ziglar",
+  "It always seems impossible until it’s done. – Nelson Mandela",
+  "Don’t watch the clock; do what it does. Keep going. – Sam Levenson",
+  "Everything you’ve ever wanted is on the other side of fear. – George Addair",
+  "Opportunities don’t happen. You create them. – Chris Grosser",
+  "Believe you can and you’re halfway there. – Theodore Roosevelt",
+  "Your time is limited, so don’t waste it living someone else’s life. – Steve Jobs",
+  "Do one thing every day that scares you. – Eleanor Roosevelt",
+  "Hardships often prepare ordinary people for an extraordinary destiny. – C.S. Lewis",
+  "Keep your face always toward the sunshine—and shadows will fall behind you. – Walt Whitman"
+];
+
+ bg.addEventListener('click',()=>{
+    h.innerText=quotes[Math.floor(Math.random()*20)]
+ })
+
+</script>
+</body>
+</html>
